@@ -22,10 +22,10 @@ notify.init ("Telegram updates")
 chats = {}
 day = 86400
 --*********BOT ID*******--
-BOTS = 425998008 --[[Enter cli bot id here]]
-bot_id = 425998008 --[[Enter cli bot id here]]
-bot_owner = 194279067 --[[Enter your id here]]
-sudo_users = {425998008,194279067,180191663,000000000,000000000} --[[Enter your Id and cli bot Id here]]
+BOTS = 415514776 --[[Enter cli bot id here]]
+bot_id = 415514776 --[[Enter cli bot id here]]
+bot_owner = 241619708 --[[Enter your id here]]
+sudo_users = {241619708,415514776,000000000,000000000,000000000} --[[Enter your Id and cli bot Id here]]
 --***********************--
 -----------------------------------------------------------------------------------------------
 ---------------
@@ -33,7 +33,7 @@ sudo_users = {425998008,194279067,180191663,000000000,000000000} --[[Enter your 
 ---------------
 -----------------------------------------------------------------------------------------------
 function is_bot(msg)
-  if tonumber(BOTS) == 364959406 then  --[[Enter your api bot id here]]
+  if tonumber(BOTS) == 425412319 then  --[[Enter your api bot id here]]
     return true
     else
     return false
@@ -625,7 +625,7 @@ function tdcli_update_callback(data)
     local expiretime = database:ttl("bot:charge:"..msg.chat_id_)
     if expiretime == 0 then
       local v = tonumber(bot_owner)
-      send(v, 0, 1, "⭕️ تاریخ تمدید این گروه فرا رسید !\n🔹لینک : "..(database:get("bot:group:link"..msg.chat_id_) or "تنظیم نشده").."\n🔸شناسه گروه :  "..msg.chat_id_..'\n🔹نام گروه : '..chat.title_..'\n\n🔹اگر میخواهید ربات گروه را ترک کند از دستور زیر استفاده کنید :\n\n🔖 leave'..msg.chat_id_..'\n\n🔸اگر قصد وارد شدن به گروه را دارید از دستور زیر استفاده کنید :\n\n🔖 join'..msg.chat_id_..'\n\n🔹اگر میخواهید ربات داخل گروه اعلام کند از دستور زیر استفاده کنید :\n\n🔖 meld'..msg.chat_id_..'\n\n🔅🔅🔅🔅🔅🔅\n\n📅 اگر قصد تمدید گروه را دارید از دستورات زیر استفاده کنید : \n\n⭕️برای شارژ به صورت یک ماه :\n🔖 plan1'..msg.chat_id_..'\n\n⭕️برای شارژ به صورت سه ماه :\n🔖 plan2'..msg.chat_id_..'\n\n⭕️برای شارژ به صورت نامحدود :\n🔖 plan3 \n\n➖➖➖➖➖➖\n➖➖➖➖➖➖\n\nch >>> @avrin_team \nCreator >>> `@yenial_admin`'..msg.chat_id_, 1, 'html')
+      send(v, 0, 1, "⭕️ تاریخ تمدید این گروه فرا رسید !\n🔹لینک : "..(database:get("bot:group:link"..msg.chat_id_) or "تنظیم نشده").."\n🔸شناسه گروه :  "..msg.chat_id_..'\n🔹نام گروه : '..chat.title_..'\n\n🔹اگر میخواهید ربات گروه را ترک کند از دستور زیر استفاده کنید :\n\n🔖 leave'..msg.chat_id_..'\n\n🔸اگر قصد وارد شدن به گروه را دارید از دستور زیر استفاده کنید :\n\n🔖 join'..msg.chat_id_..'\n\n🔹اگر میخواهید ربات داخل گروه اعلام کند از دستور زیر استفاده کنید :\n\n🔖 meld'..msg.chat_id_..'\n\n🔅🔅🔅🔅🔅🔅\n\n📅 اگر قصد تمدید گروه را دارید از دستورات زیر استفاده کنید : \n\n⭕️برای شارژ به صورت یک ماه :\n🔖 plan1'..msg.chat_id_..'\n\n⭕️برای شارژ به صورت سه ماه :\n🔖 plan2'..msg.chat_id_..'\n\n⭕️برای شارژ به صورت نامحدود :\n🔖 plan3 \n\n➖➖➖➖➖➖\n➖➖➖➖➖➖\n\ntgCh >>> @tgMember \nCreator >>> `@sajjad_021`'..msg.chat_id_, 1, 'html')
     end
     if database:get("autoleave") == "On" then
       if not database:get("bot:enable:"..msg.chat_id_) then
@@ -5318,7 +5318,7 @@ function tdcli_update_callback(data)
               send_welcome = '#غیرفعال'
             end
             ------------
-            local TXTFA = "⚙ تنظیمات گروه ربات هوشمند اورین :\n\n"
+            local TXTFA = "⚙ تنظیمات گروه ربات تلگرام گارد :\n\n"
             .."> حالت سختگیرانه : "..strict.."\n"
             .."> حالت قفل کلی گروه : "..mute_all.."\n"
             .."> حالت عدم جواب : "..mute_cmd.."\n\n"
@@ -5353,9 +5353,9 @@ function tdcli_update_callback(data)
             .."> قفل ارسال مخاطب : "..lock_contact.."\n"
             .."️> قفل موقعیت مکانی : "..lock_location.."\n\n"
 						..">➖➖➖➖➖➖➖\n"
-            ..">خرید ربات `@yenial_admin`\n"
-            ..">کانال ما : @avrin_team\n"
-            local TXTEN = "⚙ Group Settings for Avrin Smart bot :\n\n"
+            ..">develop by `@sajjad_021`\n"
+            ..">tgChannel : @tgMember\n"
+            local TXTEN = "⚙ Group Settings for tgGuard robot :\n\n"
             .."- *Group lock All* : "..mute_all.."\n"
             .."- *Commands* : "..mute_cmd.."\n"
             .."- *Strict Mode* : "..strict.."\n"
@@ -5390,8 +5390,8 @@ function tdcli_update_callback(data)
             .."- *Lock Contact* : "..lock_contact.."\n"
             .."- *Lock location* : "..lock_location.."\n\n"
 						..">➖➖➖➖➖➖➖\n"
-            ..">خرید ربات `@yenial_admin`\n"
-            ..">کانال ما : @avrinteam\n"
+            ..">develop by `@sajjad_021`\n"
+            ..">tgChannel : @tgMember\n"
             TXTEN = TXTEN:gsub("#فعال","`|Enable|`")
             TXTEN = TXTEN:gsub("#غیرفعال","`|Disable|`")
             TXTEN = TXTEN:gsub("حذف پیام","Del")
@@ -5943,7 +5943,7 @@ function tdcli_update_callback(data)
             end
           tdcli_function({
       ID = "GetInlineQueryResults",
-      bot_user_id_ = 364959406,  --[[enter api bot id here]]
+      bot_user_id_ = 425412319,  --[[enter api bot id here]]
       chat_id_ = msg.chat_id_,
       user_location_ = {
         ID = "Location",
@@ -6067,7 +6067,7 @@ function tdcli_update_callback(data)
         end
         -----------------------------------------------------------------------------------------------
         if text:match("^[Pp]ayping$") and is_sudo(msg) then
-          send(msg.chat_id_, msg.id_, 1, 'https://zarinp.al/yenial', 1, 'html')
+          send(msg.chat_id_, msg.id_, 1, 'https://zarinp.al/tgmember', 1, 'html')
         end
       end
       -----------------------------------------------------------------------------------------------
